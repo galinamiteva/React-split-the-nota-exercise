@@ -32,7 +32,9 @@ function App(props) {
         function comeBack(){
             setResult('')
         }
-      
+
+        
+
     return(
         <main className='wrapper'>
             <h2>Split the nota</h2>           
@@ -42,25 +44,20 @@ function App(props) {
 <section className='form' id='showSum'>
 <AndraForm friendSum={result} close={comeBack} /> 
 </section>:                                   
-          
+         
 
 <section className='form' id='inputForm'>
-                <section>
-                    
-                    <label>Summa:
-                        <input type='number' id='sum' className='form__input' onChange={event => setSum(event.target.value)}/>
-                    </label>
-
+                <section>                   
+                    <input type='number' id='sum' className='form__input' onChange={event => setSum(event.target.value)}/>
+                    <label htmlFor="sum" className="form__label form__label_sum">Summa: </label>
                 </section>
                 <section>
-                    <label> Antal vänner:
-                        <input type='number' id='numberOfFriends' className='form__input'  onChange={event => setFriends(event.target.value)} />
-                    </label>  
+                    <input type='number' id='numberOfFriends' className='form__input'  onChange={event => setFriends(event.target.value)}/>
+                    <label htmlFor="numberOfFriends" className="form__label form__label_friends"> Antal vänner: </label>
                 </section>
                 <section>
-                    <label> Drics:
-                        <input type='number' id='tip' className='form__input' onChange={event => setTip(event.target.value)}/>
-                    </label>
+                    <input type='number' id='tip' className='form__input' onChange={event => setTip(event.target.value)}/>  
+                    <label htmlFor="tip" className="form__label form__label_tip"> Drics:</label>
                 </section>
                     <button id='calculateButton' className='form__button' onClick ={ handleClick }>Räkna</button>           
             </section>  
