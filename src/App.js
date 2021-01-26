@@ -38,7 +38,13 @@ function App(props) {
             <h2>Split the nota</h2>           
 
         {result? 
-            <section className='form' id='inputForm'>
+
+<section className='form' id='showSum'>
+<AndraForm friendSum={result} close={comeBack} /> 
+</section>:                                   
+          
+
+<section className='form' id='inputForm'>
                 <section>
                     <input type='number' id='sum' className='form_input' onChange={event => setSum(event.target.value)}></input>
                     <label for='sum' className='form_label form_label_sum'>Summa</label>
@@ -52,11 +58,7 @@ function App(props) {
                     <label for='tip' className='form_label form_label_tip'>Drics</label>
                 </section>
                     <button id='calculateButton' className='form_button' onClick ={ handleClick }>Räkna</button>           
-            </section>:                               
-           
-            <section className='form' id='showSum'>
-                <AndraForm friendSum={result} close={comeBack} /> 
-            </section>
+            </section>  
 
             }   
         </main>
