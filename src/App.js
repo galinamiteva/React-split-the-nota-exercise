@@ -46,18 +46,23 @@ function App(props) {
 
 <section className='form' id='inputForm'>
                 <section>
-                    <input type='number' id='sum' className='form_input' onChange={event => setSum(event.target.value)}></input>
-                    <label for='sum' className='form_label form_label_sum'>Summa</label>
+                    
+                    <label>Summa:
+                        <input type='number' id='sum' className='form__input' onChange={event => setSum(event.target.value)}/>
+                    </label>
+
                 </section>
                 <section>
-                    <input type='number' id='numberOfFriends' className='form_input'  onChange={event => setFriends(event.target.value)} ></input>
-                    <label for='numberOfFriends' className='form_label form_label_friends'>Antal vänner</label>
+                    <label> Antal vänner:
+                        <input type='number' id='numberOfFriends' className='form__input'  onChange={event => setFriends(event.target.value)} />
+                    </label>  
                 </section>
                 <section>
-                <input type='number' id='tip' className='form_input' onChange={event => setTip(event.target.value)}></input>
-                    <label for='tip' className='form_label form_label_tip'>Drics</label>
+                    <label> Drics:
+                        <input type='number' id='tip' className='form__input' onChange={event => setTip(event.target.value)}/>
+                    </label>
                 </section>
-                    <button id='calculateButton' className='form_button' onClick ={ handleClick }>Räkna</button>           
+                    <button id='calculateButton' className='form__button' onClick ={ handleClick }>Räkna</button>           
             </section>  
 
             }   
